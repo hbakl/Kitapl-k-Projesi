@@ -31,21 +31,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtKitapAd = new System.Windows.Forms.TextBox();
+            this.TxtKitapYazar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtKitapSayfa = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.CmbTur = new System.Windows.Forms.ComboBox();
+            this.TxtKitapId = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.BtnListele = new System.Windows.Forms.Button();
+            this.BtnKaydet = new System.Windows.Forms.Button();
+            this.BtnSil = new System.Windows.Forms.Button();
+            this.BtnGuncelle = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +56,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 349);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(875, 225);
+            this.dataGridView1.Size = new System.Drawing.Size(624, 225);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -68,19 +68,19 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Kitap Adı:";
             // 
-            // textBox1
+            // TxtKitapAd
             // 
-            this.textBox1.Location = new System.Drawing.Point(149, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 34);
-            this.textBox1.TabIndex = 2;
+            this.TxtKitapAd.Location = new System.Drawing.Point(149, 81);
+            this.TxtKitapAd.Name = "TxtKitapAd";
+            this.TxtKitapAd.Size = new System.Drawing.Size(187, 34);
+            this.TxtKitapAd.TabIndex = 2;
             // 
-            // textBox2
+            // TxtKitapYazar
             // 
-            this.textBox2.Location = new System.Drawing.Point(149, 135);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(187, 34);
-            this.textBox2.TabIndex = 4;
+            this.TxtKitapYazar.Location = new System.Drawing.Point(149, 135);
+            this.TxtKitapYazar.Name = "TxtKitapYazar";
+            this.TxtKitapYazar.Size = new System.Drawing.Size(187, 34);
+            this.TxtKitapYazar.TabIndex = 4;
             // 
             // label2
             // 
@@ -91,12 +91,12 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Yazar:";
             // 
-            // textBox3
+            // TxtKitapSayfa
             // 
-            this.textBox3.Location = new System.Drawing.Point(149, 191);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(187, 34);
-            this.textBox3.TabIndex = 6;
+            this.TxtKitapSayfa.Location = new System.Drawing.Point(149, 191);
+            this.TxtKitapSayfa.Name = "TxtKitapSayfa";
+            this.TxtKitapSayfa.Size = new System.Drawing.Size(187, 34);
+            this.TxtKitapSayfa.TabIndex = 6;
             // 
             // label3
             // 
@@ -138,20 +138,20 @@
             this.radioButton2.Text = "Sıfır";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // CmbTur
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(149, 249);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(187, 35);
-            this.comboBox1.TabIndex = 10;
+            this.CmbTur.FormattingEnabled = true;
+            this.CmbTur.Location = new System.Drawing.Point(149, 249);
+            this.CmbTur.Name = "CmbTur";
+            this.CmbTur.Size = new System.Drawing.Size(187, 35);
+            this.CmbTur.TabIndex = 10;
             // 
-            // textBox4
+            // TxtKitapId
             // 
-            this.textBox4.Location = new System.Drawing.Point(149, 29);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(187, 34);
-            this.textBox4.TabIndex = 12;
+            this.TxtKitapId.Location = new System.Drawing.Point(149, 29);
+            this.TxtKitapId.Name = "TxtKitapId";
+            this.TxtKitapId.Size = new System.Drawing.Size(187, 34);
+            this.TxtKitapId.TabIndex = 12;
             // 
             // label5
             // 
@@ -162,41 +162,42 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Kitap ID:";
             // 
-            // button1
+            // BtnListele
             // 
-            this.button1.Location = new System.Drawing.Point(397, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 41);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Listele";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnListele.Location = new System.Drawing.Point(431, 67);
+            this.BtnListele.Name = "BtnListele";
+            this.BtnListele.Size = new System.Drawing.Size(157, 41);
+            this.BtnListele.TabIndex = 13;
+            this.BtnListele.Text = "Listele";
+            this.BtnListele.UseVisualStyleBackColor = true;
+            this.BtnListele.Click += new System.EventHandler(this.BtnListele_Click);
             // 
-            // button2
+            // BtnKaydet
             // 
-            this.button2.Location = new System.Drawing.Point(397, 81);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(157, 41);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Kaydet";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnKaydet.Location = new System.Drawing.Point(431, 119);
+            this.BtnKaydet.Name = "BtnKaydet";
+            this.BtnKaydet.Size = new System.Drawing.Size(157, 41);
+            this.BtnKaydet.TabIndex = 14;
+            this.BtnKaydet.Text = "Kaydet";
+            this.BtnKaydet.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // BtnSil
             // 
-            this.button3.Location = new System.Drawing.Point(397, 135);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(157, 41);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Sil";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnSil.Location = new System.Drawing.Point(431, 173);
+            this.BtnSil.Name = "BtnSil";
+            this.BtnSil.Size = new System.Drawing.Size(157, 41);
+            this.BtnSil.TabIndex = 15;
+            this.BtnSil.Text = "Sil";
+            this.BtnSil.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // BtnGuncelle
             // 
-            this.button4.Location = new System.Drawing.Point(397, 187);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(157, 41);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Güncelle";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Location = new System.Drawing.Point(431, 225);
+            this.BtnGuncelle.Name = "BtnGuncelle";
+            this.BtnGuncelle.Size = new System.Drawing.Size(157, 41);
+            this.BtnGuncelle.TabIndex = 16;
+            this.BtnGuncelle.Text = "Güncelle";
+            this.BtnGuncelle.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -211,30 +212,31 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(905, 586);
+            this.ClientSize = new System.Drawing.Size(652, 586);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.BtnGuncelle);
+            this.Controls.Add(this.BtnSil);
+            this.Controls.Add(this.BtnKaydet);
+            this.Controls.Add(this.BtnListele);
+            this.Controls.Add(this.TxtKitapId);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.CmbTur);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.TxtKitapSayfa);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TxtKitapYazar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtKitapAd);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Kitaplık Projesi";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -245,21 +247,21 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtKitapAd;
+        private System.Windows.Forms.TextBox TxtKitapYazar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxtKitapSayfa;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ComboBox CmbTur;
+        private System.Windows.Forms.TextBox TxtKitapId;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button BtnListele;
+        private System.Windows.Forms.Button BtnKaydet;
+        private System.Windows.Forms.Button BtnSil;
+        private System.Windows.Forms.Button BtnGuncelle;
         private System.Windows.Forms.Label label6;
     }
 }
