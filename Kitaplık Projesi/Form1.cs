@@ -168,13 +168,14 @@ namespace Kitaplık_Projesi
 
         private void BtnBul_Click(object sender, EventArgs e)
         {
-            baglanti.Open();
+
             OleDbCommand komut = new OleDbCommand("select * from Kitaplar where KitapAd=@p1", baglanti);
             komut.Parameters.AddWithValue("@p1", TxtKitapBul.Text);
             DataTable dt= new DataTable();
             OleDbDataAdapter da = new OleDbDataAdapter(komut);
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+
         }
     }
 }
