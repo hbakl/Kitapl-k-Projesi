@@ -57,7 +57,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(624, 225);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabIndex = 12;
             // 
             // label1
             // 
@@ -80,7 +80,7 @@
             this.TxtKitapYazar.Location = new System.Drawing.Point(149, 135);
             this.TxtKitapYazar.Name = "TxtKitapYazar";
             this.TxtKitapYazar.Size = new System.Drawing.Size(187, 34);
-            this.TxtKitapYazar.TabIndex = 4;
+            this.TxtKitapYazar.TabIndex = 3;
             // 
             // label2
             // 
@@ -96,7 +96,7 @@
             this.TxtKitapSayfa.Location = new System.Drawing.Point(149, 191);
             this.TxtKitapSayfa.Name = "TxtKitapSayfa";
             this.TxtKitapSayfa.Size = new System.Drawing.Size(187, 34);
-            this.TxtKitapSayfa.TabIndex = 6;
+            this.TxtKitapSayfa.TabIndex = 4;
             // 
             // label3
             // 
@@ -119,39 +119,46 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(140, 297);
+            this.radioButton1.Location = new System.Drawing.Point(149, 297);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(157, 33);
-            this.radioButton1.TabIndex = 8;
+            this.radioButton1.Size = new System.Drawing.Size(76, 33);
+            this.radioButton1.TabIndex = 6;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Kullanılmış";
+            this.radioButton1.Text = "2.El";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(303, 296);
+            this.radioButton2.Location = new System.Drawing.Point(254, 296);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(79, 33);
-            this.radioButton2.TabIndex = 9;
+            this.radioButton2.Size = new System.Drawing.Size(82, 33);
+            this.radioButton2.TabIndex = 7;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Sıfır";
+            this.radioButton2.Text = "Yeni";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // CmbTur
             // 
+            this.CmbTur.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbTur.FormattingEnabled = true;
+            this.CmbTur.Items.AddRange(new object[] {
+            "Hikaye",
+            "Roman",
+            "Şiir",
+            "Tiyatro"});
             this.CmbTur.Location = new System.Drawing.Point(149, 249);
             this.CmbTur.Name = "CmbTur";
             this.CmbTur.Size = new System.Drawing.Size(187, 35);
-            this.CmbTur.TabIndex = 10;
+            this.CmbTur.TabIndex = 5;
             // 
             // TxtKitapId
             // 
+            this.TxtKitapId.Enabled = false;
             this.TxtKitapId.Location = new System.Drawing.Point(149, 29);
             this.TxtKitapId.Name = "TxtKitapId";
             this.TxtKitapId.Size = new System.Drawing.Size(187, 34);
-            this.TxtKitapId.TabIndex = 12;
+            this.TxtKitapId.TabIndex = 1;
             // 
             // label5
             // 
@@ -167,7 +174,7 @@
             this.BtnListele.Location = new System.Drawing.Point(431, 67);
             this.BtnListele.Name = "BtnListele";
             this.BtnListele.Size = new System.Drawing.Size(157, 41);
-            this.BtnListele.TabIndex = 13;
+            this.BtnListele.TabIndex = 8;
             this.BtnListele.Text = "Listele";
             this.BtnListele.UseVisualStyleBackColor = true;
             this.BtnListele.Click += new System.EventHandler(this.BtnListele_Click);
@@ -177,16 +184,17 @@
             this.BtnKaydet.Location = new System.Drawing.Point(431, 119);
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(157, 41);
-            this.BtnKaydet.TabIndex = 14;
+            this.BtnKaydet.TabIndex = 9;
             this.BtnKaydet.Text = "Kaydet";
             this.BtnKaydet.UseVisualStyleBackColor = true;
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // BtnSil
             // 
             this.BtnSil.Location = new System.Drawing.Point(431, 173);
             this.BtnSil.Name = "BtnSil";
             this.BtnSil.Size = new System.Drawing.Size(157, 41);
-            this.BtnSil.TabIndex = 15;
+            this.BtnSil.TabIndex = 10;
             this.BtnSil.Text = "Sil";
             this.BtnSil.UseVisualStyleBackColor = true;
             // 
@@ -195,7 +203,7 @@
             this.BtnGuncelle.Location = new System.Drawing.Point(431, 225);
             this.BtnGuncelle.Name = "BtnGuncelle";
             this.BtnGuncelle.Size = new System.Drawing.Size(157, 41);
-            this.BtnGuncelle.TabIndex = 16;
+            this.BtnGuncelle.TabIndex = 11;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
             // 
@@ -233,7 +241,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form1";
             this.Text = "Kitaplık Projesi";
             this.Load += new System.EventHandler(this.Form1_Load);
