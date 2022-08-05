@@ -127,5 +127,54 @@ namespace Kitaplık_Projesi
                 MessageBox.Show("Lütfen listeden bir kitap seçiniz!", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            OleDbCommand komut = new OleDbCommand("update kitaplar set KitapAd=@p1, Yazar=@p2, Tur=@p3, Sayfa=@p4, Durum=@p5  where Kitapid=@p6", baglanti);
+            komut.Parameters.AddWithValue("@p1", TxtKitapAd.Text);
+            komut.Parameters.AddWithValue("@p2", TxtKitapYazar.Text);
+            komut.Parameters.AddWithValue("@p3", CmbTur.Text);
+            komut.Parameters.AddWithValue("@p4", TxtKitapSayfa.Text);
+
+
+
+            if (radioButton1.Checked == true)
+            {
+                komut.Parameters.AddWithValue("@p5", "1");
+            }
+            else if(radioButton2.Checked == true)
+            {
+                komut.Parameters.AddWithValue("@p5", "0");
+            }
+
+
+            komut.Parameters.AddWithValue("@p6", TxtKitapId.Text);
+
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Kitap bilgisi başarıyla güncellendi.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            listele();
+
+            //silme sonrası veri kutucuklarını silen kodlar
+            TxtKitapAd.Text = "";
+            TxtKitapId.Text = "";
+            TxtKitapSayfa.Text = "";
+            TxtKitapYazar.Text = "";
+            CmbTur.Text = null;
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+        }
+
+        private void BtnBul_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            OleDbCommand komut = new OleDbCommand("select * from Kitaplar where KitapAd=@p1", baglanti);
+            komut.Parameters.AddWithValue("@p1", TxtKitapBul.Text);
+            DataTable dt= new DataTable();
+            OleDbDataAdapter da = new OleDbDataAdapter(komut);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
     }
 }

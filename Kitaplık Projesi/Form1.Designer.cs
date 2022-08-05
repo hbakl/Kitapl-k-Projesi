@@ -47,6 +47,8 @@
             this.BtnSil = new System.Windows.Forms.Button();
             this.BtnGuncelle = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.TxtKitapBul = new System.Windows.Forms.TextBox();
+            this.BtnBul = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -172,7 +174,7 @@
             // 
             // BtnListele
             // 
-            this.BtnListele.Location = new System.Drawing.Point(431, 67);
+            this.BtnListele.Location = new System.Drawing.Point(432, 36);
             this.BtnListele.Name = "BtnListele";
             this.BtnListele.Size = new System.Drawing.Size(157, 41);
             this.BtnListele.TabIndex = 8;
@@ -182,7 +184,7 @@
             // 
             // BtnKaydet
             // 
-            this.BtnKaydet.Location = new System.Drawing.Point(431, 119);
+            this.BtnKaydet.Location = new System.Drawing.Point(432, 88);
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(157, 41);
             this.BtnKaydet.TabIndex = 9;
@@ -192,7 +194,7 @@
             // 
             // BtnSil
             // 
-            this.BtnSil.Location = new System.Drawing.Point(431, 173);
+            this.BtnSil.Location = new System.Drawing.Point(432, 142);
             this.BtnSil.Name = "BtnSil";
             this.BtnSil.Size = new System.Drawing.Size(157, 41);
             this.BtnSil.TabIndex = 10;
@@ -202,12 +204,13 @@
             // 
             // BtnGuncelle
             // 
-            this.BtnGuncelle.Location = new System.Drawing.Point(431, 225);
+            this.BtnGuncelle.Location = new System.Drawing.Point(432, 194);
             this.BtnGuncelle.Name = "BtnGuncelle";
             this.BtnGuncelle.Size = new System.Drawing.Size(157, 41);
             this.BtnGuncelle.TabIndex = 11;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // label6
             // 
@@ -218,11 +221,30 @@
             this.label6.TabIndex = 17;
             this.label6.Text = "Durum:";
             // 
+            // TxtKitapBul
+            // 
+            this.TxtKitapBul.Location = new System.Drawing.Point(389, 252);
+            this.TxtKitapBul.Name = "TxtKitapBul";
+            this.TxtKitapBul.Size = new System.Drawing.Size(172, 34);
+            this.TxtKitapBul.TabIndex = 18;
+            // 
+            // BtnBul
+            // 
+            this.BtnBul.Location = new System.Drawing.Point(567, 252);
+            this.BtnBul.Name = "BtnBul";
+            this.BtnBul.Size = new System.Drawing.Size(59, 34);
+            this.BtnBul.TabIndex = 20;
+            this.BtnBul.Text = "Ara";
+            this.BtnBul.UseVisualStyleBackColor = true;
+            this.BtnBul.Click += new System.EventHandler(this.BtnBul_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(652, 586);
+            this.Controls.Add(this.BtnBul);
+            this.Controls.Add(this.TxtKitapBul);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.BtnGuncelle);
             this.Controls.Add(this.BtnSil);
@@ -273,6 +295,8 @@
         private System.Windows.Forms.Button BtnSil;
         private System.Windows.Forms.Button BtnGuncelle;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox TxtKitapBul;
+        private System.Windows.Forms.Button BtnBul;
     }
 }
 
