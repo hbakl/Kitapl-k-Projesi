@@ -58,6 +58,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(624, 225);
             this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label1
             // 
@@ -197,6 +198,7 @@
             this.BtnSil.TabIndex = 10;
             this.BtnSil.Text = "Sil";
             this.BtnSil.UseVisualStyleBackColor = true;
+            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
             // BtnGuncelle
             // 

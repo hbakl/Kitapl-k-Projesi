@@ -70,6 +70,62 @@ namespace Kitaplık_Projesi
             MessageBox.Show("Kitap başarıyla eklendi!", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             listele();
 
+            //kayıt sonrası veri kutucuklarını silen kodlar
+            TxtKitapAd.Text = "";
+            TxtKitapId.Text = "";
+            TxtKitapSayfa.Text = "";
+            TxtKitapYazar.Text = "";
+            CmbTur.Text = null;
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //datagridviewe tıklayınca verileri kutucuklara çeken kodlar.
+            int secilen = dataGridView1.SelectedCells[0].RowIndex;
+            TxtKitapId.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
+            TxtKitapAd.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
+            TxtKitapYazar.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
+            CmbTur.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
+            TxtKitapSayfa.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
+            if (dataGridView1.Rows[secilen].Cells[5].Value.ToString()=="True")
+            {
+                radioButton1.Checked = true;
+            }
+            else if (dataGridView1.Rows[secilen].Cells[5].Value.ToString() == "False")
+            {
+                radioButton2.Checked = true;
+            }
+        }
+
+        private void BtnSil_Click(object sender, EventArgs e)
+        {
+            //id alanı dolu ise kitabı silen kodlar
+            if (TxtKitapId.Text != "")
+            {
+                baglanti.Open();
+                OleDbCommand komut = new OleDbCommand("delete from kitaplar where Kitapid=@p1", baglanti);
+                komut.Parameters.AddWithValue("@p1", TxtKitapId.Text);
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                MessageBox.Show("Kitap başarıyla silindi.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                listele();
+
+                //silme sonrası veri kutucuklarını silen kodlar
+                TxtKitapAd.Text = "";
+                TxtKitapId.Text = "";
+                TxtKitapSayfa.Text = "";
+                TxtKitapYazar.Text = "";
+                CmbTur.Text = null;
+                radioButton1.Checked = false;
+                radioButton2.Checked = false;
+            }
+            else
+            {
+                MessageBox.Show("Lütfen listeden bir kitap seçiniz!", "Uyarı!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
