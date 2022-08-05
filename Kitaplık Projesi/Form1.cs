@@ -177,5 +177,17 @@ namespace Kitaplık_Projesi
             dataGridView1.DataSource = dt;
 
         }
+
+
+
+        private void TxtAra_TextChanged(object sender, EventArgs e)
+        {
+            OleDbCommand komut = new OleDbCommand("select * from Kitaplar where KitapAd like '%" + TxtAra.Text + "%' ", baglanti);
+            komut.Parameters.AddWithValue("@p1", TxtKitapBul.Text);
+            DataTable dt = new DataTable();
+            OleDbDataAdapter da = new OleDbDataAdapter(komut);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
     }
 }

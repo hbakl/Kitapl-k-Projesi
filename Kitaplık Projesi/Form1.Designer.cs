@@ -49,6 +49,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.TxtKitapBul = new System.Windows.Forms.TextBox();
             this.BtnBul = new System.Windows.Forms.Button();
+            this.TxtAra = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -238,11 +239,20 @@
             this.BtnBul.UseVisualStyleBackColor = true;
             this.BtnBul.Click += new System.EventHandler(this.BtnBul_Click);
             // 
+            // TxtAra
+            // 
+            this.TxtAra.Location = new System.Drawing.Point(389, 295);
+            this.TxtAra.Name = "TxtAra";
+            this.TxtAra.Size = new System.Drawing.Size(172, 34);
+            this.TxtAra.TabIndex = 21;
+            this.TxtAra.TextChanged += new System.EventHandler(this.TxtAra_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(652, 586);
+            this.Controls.Add(this.TxtAra);
             this.Controls.Add(this.BtnBul);
             this.Controls.Add(this.TxtKitapBul);
             this.Controls.Add(this.label6);
@@ -297,6 +307,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TxtKitapBul;
         private System.Windows.Forms.Button BtnBul;
+        private System.Windows.Forms.TextBox TxtAra;
     }
 }
 
